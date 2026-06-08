@@ -1,0 +1,256 @@
+!
+! ==============================
+! VS-1-2 (Central switch n°2 in virtual group VS1)
+! ==============================
+!
+! === Basic configs
+!
+configure terminal
+hostname VS-1-2
+!
+! === VLAN routing
+!
+! VLAN creation
+vlan 10
+ name Management
+vlan 20
+ name Production
+vlan 30
+ name Service-1
+vlan 40
+ name Service-2
+vlan 50
+ name Study
+vlan 60
+ name IT
+vlan 70
+ name DMZ
+vlan 80
+ name InternalServers
+! VLAN 99 is where all traffic without a vlan tag goes. 
+! It's necessary to enable it and needs to be the same on both sides of a trunk.
+! Best practice is to not allow traffic on it.
+vlan 99
+ name native_unused
+! IP address configs per VLAN
+interface vlan 10
+! The device needs its own IP address per VLAN to be reachable
+ ip address 192.168.1.30 255.255.255.224
+! IP address of the DCHP server
+ ip helper-address 192.168.1.212
+! Create redundancy between the two central switches
+ standby version 2
+! Virtual IP address given as default router to the other devices
+ standby 10 ip 192.168.1.1
+! This switch is the main switch (highest priority)
+ standby 10 priority 150
+ standby 10 preempt
+ no shutdown
+interface vlan 20
+ ip address 192.168.1.62 255.255.255.224
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 20 ip 192.168.1.33
+ standby 20 priority 150
+ standby 20 preempt
+ no shutdown
+interface vlan 30
+ ip address 192.168.1.94 255.255.255.224
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 30 ip 192.168.1.65
+ standby 30 priority 150
+ standby 30 preempt
+ no shutdown
+interface vlan 40
+ ip address 192.168.1.127 255.255.255.224
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 40 ip 192.168.1.97
+ standby 40 priority 150
+ standby 40 preempt
+ no shutdown
+interface vlan 50
+ ip address 192.168.1.158 255.255.255.224
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 50 ip 192.168.1.129
+ standby 50 priority 150
+ standby 50 preempt
+ no shutdown
+interface vlan 60
+ ip address 192.168.1.191 255.255.255.224
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 60 ip 192.168.1.161
+ standby 60 priority 150
+ standby 60 preempt
+ no shutdown
+interface vlan 70
+ ip address 192.168.1.199 255.255.255.240
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 70 ip 192.168.1.197
+ standby 70 priority 150
+ standby 70 preempt
+ no shutdown
+interface vlan 80
+ ip address 192.168.1.215 255.255.255.240
+ ip helper-address 192.168.1.212
+ standby version 2
+ standby 80 ip 192.168.1.209
+ standby 80 priority 150
+ standby 80 preempt
+ no shutdown
+! A trunk is a connection between two switches where vlan traffic circulates.
+! It needs to be configured on both sides.
+! Trunk to MG-SW-1
+interface f0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10
+! Trunk to PD-SW-1
+interface f0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 20
+interface f0/3
+! Trunk to SP1-SW-1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 30
+! Trunk to SP2-SW-1
+interface f0/4
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 40
+! Trunk to ST-SW-1
+interface f0/5
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 50
+! Trunk to IT-SW-1
+interface f0/6
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 60
+! Trunk to DMZ-SW-1
+interface g0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 70
+! Trunk to IS-SW-1
+interface f0/8
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 80
+! Trunk to DMZ-SW-2
+interface f0/9
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 70
+! Trunk to VS-1-2 (redundant central switch)
+interface g0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,40,50,60,70,80
+ exit
+!
+!== Default route to border router (for internet traffic)
+!
+ip route 0.0.0.0 0.0.0.0 192.168.1.194
+!
+! === AAA server config
+!
+! Basic security settings
+! Create a local user as fallback in case the AAA server is down
+username backupadmin secret StrongPassword123
+! Secure priviledged EXEC mode
+enable secret admin
+! Encrypt local passwords
+service password-encryption
+! Configure a domain (necessary for SSH)
+ip domain-name KZD.com
+! Enable SSH
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+line vty 0 4
+ login authentication default
+ transport input ssh
+exit
+! Configure the connection to the AAA server
+aaa new-model
+! Server address
+tacacs-server host 192.168.1.211
+! Shared key to authenticate
+tacacs-server key vs2
+! Enable AAA and use the local database as fallback
+aaa authentication login default group tacacs+ local
+aaa authorization exec default group tacacs+ local
+!
+! === Firewall alternative - ACLs
+! === Block all traffic from DMZ to inside except IMCP, DNS and return TCP
+!
+! Creat the ACL
+!
+ip access-list extended DMZ-IN
+!
+! Allow traffic for TCP sessions established from the inside (return web traffic)
+!
+ permit tcp any any established
+!
+! Allow DNS requests
+!
+ permit udp any any eq 53
+ permit udp any eq 53 any
+ permit tcp any any eq 53
+ permit tcp any eq 53 any
+!
+! Allow ICMP for troubleshooting
+!
+ permit icmp any any
+!
+! Block everything else from the DMZ to the inside
+!
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.0 0.0.0.31
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.32 0.0.0.31
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.64 0.0.0.31
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.96 0.0.0.31
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.128 0.0.0.31
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.160 0.0.0.31
+ deny ip 192.168.1.192 0.0.0.15 192.168.1.208 0.0.0.7
+!
+! Allow the DMZ to reach any other IPs that aren't internal (for web communication)
+!
+ permit ip 192.168.1.192 0.0.0.15 any
+!
+! Assign the ACL to the DMZ VLAN interface
+!
+interface vlan 70
+ ip access-group DMZ-IN in
+ exit
+!
+! === Save runnings configs in case the device reboots
+!
+exit
+copy running-config startup-config

@@ -1,0 +1,98 @@
+!
+! ==============================
+! DMZ-RT-1
+! ==============================
+!
+! === Basic configs
+!
+configure terminal
+hostname DMZ-RT-1
+!
+!==IP address assignment
+!
+interface g0/0
+ ip address 192.168.1.194 255.255.255.240
+ no shutdown
+interface s0/3/0
+ ip address 200.1.1.2 255.255.255.252
+ no shutdown
+exit
+!
+! == Configure routing
+!
+! Route back to internal networks via VS1
+ip route 192.168.1.0 255.255.255.0 192.168.1.197
+! Default route to ISP
+ip route 0.0.0.0 0.0.0.0 200.1.1.1
+!
+! == Configure NAT/PAT for inside networks
+!
+! Configure which interface is outside and inside for NAT
+interface g0/0
+ ip nat inside
+interface s0/3/0
+ ip nat outside
+ exit
+! Create a an access-list of devices that can communicate with the outside
+access-list 1 permit 192.168.1.0 0.0.0.255
+! Apply NAT to the inside interface
+! Note: overload = many private hosts share one public IP using TCP/UDP ports
+ip nat inside source list 1 interface s0/3/0 overload
+!
+! === Login config (no AAA)
+!
+! Create a local user
+username admin secret admin
+! Secure priviledged EXEC mode
+enable secret admin
+! Encrypt local passwords
+service password-encryption
+! Configure a domain (necessary for SSH)
+ip domain-name KZD.com
+! Enable SSH
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+line vty 0 4
+ login local
+ transport input ssh
+exit
+! Enable local login in console mode
+line console 0
+ login local
+exit
+!
+!== Firewall alternative - Configure ACLs for inbound traffic
+!
+! Create a new access-list
+ip access-list extended INTERNET-IN
+! Set up the rules:
+! Drop spoofed private sources coming from Internet
+ deny ip 10.0.0.0 0.255.255.255 any
+ deny ip 172.16.0.0 0.15.255.255 any
+ deny ip 192.168.0.0 0.0.255.255 any
+! Allow return traffic for TCP sessions initiated from inside
+permit tcp any any established
+! Allow DNS requests
+ permit udp any any eq 53
+ permit udp any eq 53 any
+ permit tcp any any eq 53
+ permit tcp any eq 53 any
+! Allow ICMP echo replies (helps ping troubleshooting)
+ permit icmp any any
+! Deny everything else inbound
+ deny ip any any
+! Assign the access-list to the outer interface
+interface s0/3/0
+ ip access-group INTERNET-IN in
+ exit
+! Disabling the Cisco Discovery Protocol (CDP) on the outside interface helps to prevent reconnaissance attacks.
+interface s0/3/0
+ no cdp enable
+ exit
+!
+! === Save runnings configs in case the device reboots
+!
+exit
+copy running-config startup-config
+
+

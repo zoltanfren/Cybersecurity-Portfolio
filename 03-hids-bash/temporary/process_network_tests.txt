@@ -1,0 +1,24 @@
+==Demo A: suspicious executable path:
+cp /bin/sleep /tmp/fake_sleep
+chmod +x /tmp/fake_sleep
+/tmp/fake_sleep 300
+
+==Demo A: cleanup:
+pkill -f /tmp/fake_sleep
+rm -f /tmp/fake_sleep
+
+
+==Demo B: suspicious command line:
+bash -c 'sleep 300'
+
+==Demo B: cleanup:
+pkill -f "bash -c sleep 300"
+
+==Demo C: suspicious network listener:
+cp /bin/nc /tmp/fake_nc
+chmod +x /tmp/fake_nc
+/tmp/fake_nc -l -p 4444
+
+==Demo C: cleanup:
+pkill -f /tmp/fake_nc
+rm -f /tmp/fake_nc

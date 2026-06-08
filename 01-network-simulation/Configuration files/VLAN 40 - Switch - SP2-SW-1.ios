@@ -1,0 +1,110 @@
+!
+! ==============================
+! SP2-SW-1 (Switch of VLAN 40) - 192.168.1.98
+! ==============================
+!
+! === Basic configs
+!
+configure terminal
+hostname SP2-SW-1
+ip default-gateway 192.168.1.97
+!
+! == VLAN routing ==
+!
+! Current VLAN
+vlan 40
+ name Support-2
+! We give an IP address to the switch to allow connection to it (also necessary for AAA)
+interface VLAN 40
+ ip address 192.168.1.98 255.255.255.224
+no shutdown
+! VLAN 99 is where all traffic without a vlan tag goes. 
+! It's necessary to enable it and needs to be the same on both sides of a trunk.
+! Best practice is to not allow traffic on it.
+vlan 99
+ name native_unused
+! A trunk is a connection between two switches where vlan traffic circulates.
+! It needs to be configured on both sides.
+! Trunk to VS-1-1
+interface fa0/1
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 40
+! There is a second trunk to the backup switch since we use for redundancy.
+! Trunk to VS-1-2
+interface fa0/2
+ switchport mode trunk
+ switchport nonegotiate
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 40
+! All the other ports of the switch will be in "access mode" = you can connect to this vlan from it.
+interface range fa0/3-24,g0/1-2
+ switchport mode access
+ switchport nonegotiate
+ switchport access vlan 40
+ exit
+!
+! === AAA server config
+!
+! Basic security settings
+! Create a local user as fallback in case the AAA server is down
+username backupadmin secret admin
+! Secure priviledged EXEC mode
+enable secret admin
+! Encrypt local passwords
+service password-encryption
+! Configure a domain (necessary for SSH)
+ip domain-name KZD.com
+! Enable SSH
+crypto key generate rsa general-keys modulus 1024
+ip ssh version 2
+line vty 0 4
+login authentication default
+transport input ssh
+exit
+! Configure the connection to the AAA server
+aaa new-model
+! Server address
+tacacs-server host 192.168.1.211
+! Shared key to authenticate
+tacacs-server key sp2-sw
+! Enable AAA and use the local database as fallback
+aaa authentication login default group tacacs+ local
+aaa authorization exec default group tacacs+ local
+!
+! === Additional security measures
+!
+! The port-security command prevents mac address attacks.
+! It learns the mac address of the current device attached to it and prevents other devices from using the port.
+! Disabling the Cisco Discovery Protocol (CDP) helps to prevent reconnaissance attacks.
+interface range fa0/6-24,g0/1-2
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ no cdp enable
+ exit
+! DHCP snooping and Dynamic ARP inspection(DAI) prevent DHCP and ARP attacks.
+! You define trusted ports (connection to other switches) and don't trust the other ports (connection to end devices)
+ip dhcp snooping
+ip dhcp snooping vlan 40
+ip arp inspection vlan 40
+! Trusted ports (connection to VS-1-1 and VS-1-2)
+interface range fa0/1-2
+ ip dhcp snooping trust
+ ip arp inspection trust
+exit
+! PortFast and BDU guard will prevent attacks on STP (mechanism used between swithes to protect against network loops)
+! Their default settings will enable them on all access ports (end-device ports)
+! These ports won't participate in STP
+spanning-tree portfast default
+spanning-tree portfast bpduguard default
+! All unused ports need to be disabled as best practice.
+interface range fa0/6-24,g0/1-2
+ shutdown
+ exit
+!
+! === Save runnings configs in case the device reboots
+!
+exit
+copy running-config startup-config
