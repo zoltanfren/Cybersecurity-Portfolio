@@ -2,7 +2,7 @@
 
 A cloud security home lab built on Azure, simulating a corporate network topology originally designed in Cisco Packet Tracer. 
 Built for portfolio purposes targeting a Cloud Security Engineer role, and as hands-on preparation for AZ-104 and AZ-500 certifications.
-The project is structured in different phases implementing an increasingly complex network.
+The project is structured in phases, each building on the previous to implement an increasingly complex and realistic cloud security environment.
 
 ## Phases
 
