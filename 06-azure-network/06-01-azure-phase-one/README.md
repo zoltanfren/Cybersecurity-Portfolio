@@ -4,8 +4,8 @@ In phase one I have implemented the following;
 - Core architecture of the network, main VNet and subnets
 - Two VMs simulating an internal server and the jumpbox in the DMZ
 - Basic security with Network Security Groups and Microsoft Defender for Cloud
-- Monitoring & logging via Log Analystics workspace
-- Full instrastructure exported as Bicep template
+- Monitoring & logging via Log Analytics workspace
+- Full infrastructure exported as Bicep template
 
 ## Architecture
 
@@ -22,6 +22,8 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 | `snet-dmz` | 10.0.70.0/28 | Public-facing / jump box | ⭐ VM deployed |
 | `snet-internal` | 10.0.80.0/28 | Internal servers | Simulated |
 
+![subnets](images/03-subnets.png)
+
 ## Virtual Machines
 
 - vm-jumpbox-01 — Ubuntu 24.04 LTS, snet-dmz, public IP, SSH key authentication only
@@ -35,7 +37,18 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 - All VMs use SSH key pairs
 - All SSH access enters through vm-jumpbox-01 in the DMZ, with inbound rules restricted to operator IP
 - Dynamic IP update script for operators working from changing locations
+```bash
+az network nsg rule update \
+  --resource-group rg-lab-portfolio \
+  --nsg-name nsg-dmz \
+  --name allow-ssh-from-current-ip \
+  --source-address-prefixes $(curl -s https://api.ipify.org)
+```
 - 8 Network Security Groups (NSGs), one per subnet, enforcing least-privilege inter-subnet communication
+
+![network_diagram](images/04-azure_lab_network_diagram.png)
+
+![nsgs](images/02-nsgs.png)
 
 ## Security Controls
 

@@ -25,4 +25,4 @@ This repository contains the projects I completed during my cybersecurity traini
 
 I completed this training as part of the BeCode Cybersec Belgium program. My background combines IT support, presales, and a strong interest in cloud security — I hold the Microsoft Azure Fundamentals (AZ-900) certification and am currently working toward AZ-500 and SC-200.
 
-Feel free to reach out via [LinkedIn](https://linkedin.com/in/YOUR-PROFILE) if you have any questions about the work here.
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/zoltan-f/) if you have any questions about the work here.
