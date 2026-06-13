@@ -28,6 +28,8 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 - vm-it-01 — Ubuntu 24.04 LTS, snet-it, no public IP, reachable only via jump box
 - Both VMs: Standard HDD, auto-shutdown at 19:00 UTC, password authentication disabled
 
+![virtual_machines](images/01-virtual-machines.png)
+
 ## Network security
 
 - All VMs use SSH key pairs
