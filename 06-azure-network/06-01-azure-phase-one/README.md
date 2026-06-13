@@ -45,6 +45,7 @@ az network nsg rule update \
   --source-address-prefixes $(curl -s https://api.ipify.org)
 ```
 - 8 Network Security Groups (NSGs), one per subnet, enforcing least-privilege inter-subnet communication
+- NSGs verified with Network Watcher
 
 ![network_diagram](images/04-azure_lab_network_diagram.png)
 
@@ -68,5 +69,5 @@ az network nsg rule update \
 - Infrastructure exported as ARM template via `az group export`
 - ARM template decompiled to Bicep -> circular dependency errors from 
   duplicate NSG rule definitions required a clean hand-written rewrite
-- Final `main.bicep` is parameterized and free of auto-generated noise
+- Final [main.bicep](./main.bicep) is parameterized and free of auto-generated noise
 
