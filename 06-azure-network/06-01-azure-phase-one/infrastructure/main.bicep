@@ -28,22 +28,16 @@ param vmSize string = 'Standard_B2ats_v2'
 var vnetName = 'vnet-lab'
 var vnetPrefix = '10.0.0.0/16'
 
-var subnets = [
-  { name: 'snet-mgmt',     prefix: '10.0.10.0/27' }
-  { name: 'snet-prod',     prefix: '10.0.20.0/27' }
-  { name: 'snet-support1', prefix: '10.0.30.0/27' }
-  { name: 'snet-support2', prefix: '10.0.40.0/27' }
-  { name: 'snet-study',    prefix: '10.0.50.0/27' }
-  { name: 'snet-it',       prefix: '10.0.60.0/27' }
-  { name: 'snet-dmz',      prefix: '10.0.70.0/28' }
-  { name: 'snet-internal', prefix: '10.0.80.0/28' }
-]
-
 // =============================================================
 // NSGs — one per subnet
+// Design: default deny, explicit allow (Zero Trust)
+// Azure implicit defaults: AllowVnetInBound (65000), AllowVnetOutBound (65000),
+// DenyAllInBound (65500). Our deny rules at 4000-4096 override the VNet allows.
 // =============================================================
 
-// DMZ NSG — allows SSH from operator IP only
+// DMZ NSG
+// Inbound:  SSH from operator IP only
+// Outbound: SSH to IT and internal subnets only — nothing else
 resource nsgDmz 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   name: 'nsg-dmz'
   location: location
@@ -62,39 +56,68 @@ resource nsgDmz 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
           destinationPortRange: '22'
         }
       }
-    ]
-  }
-}
-
-// IT NSG — SSH from mgmt subnet, all traffic from internal subnet
-resource nsgIt 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
-  name: 'nsg-it'
-  location: location
-  properties: {
-    securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'deny-vnet-inbound'
         properties: {
-          priority: 100
+          priority: 4000
           direction: 'Inbound'
-          access: 'Allow'
-          protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'allow-ssh-to-it'
+        properties: {
+          priority: 100
+          direction: 'Outbound'
+          access: 'Allow'
+          protocol: 'Tcp'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '10.0.60.0/27'
           destinationPortRange: '22'
         }
       }
       {
-        name: 'allow-from-internal'
+        name: 'allow-ssh-to-internal'
         properties: {
           priority: 200
-          direction: 'Inbound'
+          direction: 'Outbound'
           access: 'Allow'
-          protocol: '*'
-          sourceAddressPrefix: '10.0.80.0/28'
+          protocol: 'Tcp'
+          sourceAddressPrefix: '*'
           sourcePortRange: '*'
-          destinationAddressPrefix: '*'
+          destinationAddressPrefix: '10.0.80.0/28'
+          destinationPortRange: '22'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4000
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-internet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
           destinationPortRange: '*'
         }
       }
@@ -102,20 +125,99 @@ resource nsgIt 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   }
 }
 
-// Internal NSG — SSH from mgmt, all traffic from IT subnet
+// IT NSG
+// Inbound:  SSH from jump box (snet-dmz) only
+// Outbound: All traffic to internal servers, HTTP/HTTPS to internet for updates
+resource nsgIt 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
+  name: 'nsg-it'
+  location: location
+  properties: {
+    securityRules: [
+      {
+        name: 'allow-ssh-from-dmz'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: 'Tcp'
+          sourceAddressPrefix: '10.0.70.0/28'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '22'
+        }
+      }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'allow-to-internal'
+        properties: {
+          priority: 100
+          direction: 'Outbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '10.0.80.0/28'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'allow-http-https-internet'
+        properties: {
+          priority: 200
+          direction: 'Outbound'
+          access: 'Allow'
+          protocol: 'Tcp'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRanges: [ '80', '443' ]
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
+        }
+      }
+    ]
+  }
+}
+
+// Internal servers NSG
+// Inbound:  SSH from jump box, all traffic from IT subnet
+// Outbound: Nothing — servers never initiate connections
 resource nsgInternal 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   name: 'nsg-internal'
   location: location
   properties: {
     securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'allow-ssh-from-dmz'
         properties: {
           priority: 100
           direction: 'Inbound'
           access: 'Allow'
           protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          sourceAddressPrefix: '10.0.70.0/28'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
           destinationPortRange: '22'
@@ -134,27 +236,94 @@ resource nsgInternal 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
           destinationPortRange: '*'
         }
       }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4000
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-internet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRange: '*'
+        }
+      }
     ]
   }
 }
 
-// Simulated subnets — SSH from mgmt only
+// Simulated workstation subnets — no VMs, rules enforce future-proof segmentation
+// Inbound:  No VNet traffic (nothing to receive)
+// Outbound: HTTP/HTTPS to internet only, no VNet lateral movement
 resource nsgMgmt 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   name: 'nsg-mgmt'
   location: location
   properties: {
     securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'allow-http-https-internet'
         properties: {
           priority: 100
-          direction: 'Inbound'
+          direction: 'Outbound'
           access: 'Allow'
           protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRanges: [ '80', '443' ]
+        }
+      }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
-          destinationPortRange: '22'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
         }
       }
     ]
@@ -167,16 +336,42 @@ resource nsgProd 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   properties: {
     securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'allow-http-https-internet'
         properties: {
           priority: 100
-          direction: 'Inbound'
+          direction: 'Outbound'
           access: 'Allow'
           protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRanges: [ '80', '443' ]
+        }
+      }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
-          destinationPortRange: '22'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
         }
       }
     ]
@@ -189,16 +384,42 @@ resource nsgSupport1 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   properties: {
     securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'allow-http-https-internet'
         properties: {
           priority: 100
-          direction: 'Inbound'
+          direction: 'Outbound'
           access: 'Allow'
           protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRanges: [ '80', '443' ]
+        }
+      }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
-          destinationPortRange: '22'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
         }
       }
     ]
@@ -211,16 +432,42 @@ resource nsgSupport2 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   properties: {
     securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'allow-http-https-internet'
         properties: {
           priority: 100
-          direction: 'Inbound'
+          direction: 'Outbound'
           access: 'Allow'
           protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRanges: [ '80', '443' ]
+        }
+      }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
-          destinationPortRange: '22'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
         }
       }
     ]
@@ -233,16 +480,42 @@ resource nsgStudy 'Microsoft.Network/networkSecurityGroups@2023-09-01' = {
   properties: {
     securityRules: [
       {
-        name: 'allow-ssh-from-mgmt'
+        name: 'allow-http-https-internet'
         properties: {
           priority: 100
-          direction: 'Inbound'
+          direction: 'Outbound'
           access: 'Allow'
           protocol: 'Tcp'
-          sourceAddressPrefix: '10.0.10.0/27'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'Internet'
+          destinationPortRanges: [ '80', '443' ]
+        }
+      }
+      {
+        name: 'deny-vnet-inbound'
+        properties: {
+          priority: 4000
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
           destinationAddressPrefix: '*'
-          destinationPortRange: '22'
+          destinationPortRange: '*'
+        }
+      }
+      {
+        name: 'deny-vnet-outbound'
+        properties: {
+          priority: 4096
+          direction: 'Outbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: 'VirtualNetwork'
+          destinationPortRange: '*'
         }
       }
     ]
