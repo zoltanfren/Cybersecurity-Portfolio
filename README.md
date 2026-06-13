@@ -1,6 +1,6 @@
 # BeCode Cybersecurity Portfolio
 
-This repository contains the projects I completed during my cybersecurity training at BeCode (Cybersec Belgium). The projects cover a range of topics — from network fundamentals to incident response — and are ordered roughly by progression.
+This repository contains the projects I completed during my cybersecurity training at BeCode (Cybersecurity Analyst). The projects cover a range of topics, from network fundamentals to incident response, and are ordered roughly by progression. The last project was built to demonstrate practical skills developed while preparing for the AZ-104 and AZ-500 certifications.
 
 ## Projects
 
