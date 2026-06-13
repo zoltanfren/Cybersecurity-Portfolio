@@ -8,7 +8,7 @@ The project is structured in different phases implementing an increasingly compl
 
 | # | Phaset | Topics |
 |---|---------|--------|
-| 01 | [Phase 1](./01-phase-one/) | Virtual Machines, Subnetting, Network Security Groups, Microsoft Defender for Cloud, Monitoring & Logging, Infrastructure as Code |
-| 02 | [Phase 2](./02-phase-two/) | TBD |
+| 01 | [Phase 1](./06-01-azure-phase-one/) | Virtual Machines, Subnetting, Network Security Groups, Microsoft Defender for Cloud, Monitoring & Logging, Infrastructure as Code |
+| 02 | [Phase 2](./06-02-azure-phase-two/) | TBD |
 
 
