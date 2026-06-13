@@ -11,6 +11,7 @@ This repository contains the projects I completed during my cybersecurity traini
 | 03 | [HIDS in Bash](./03-hids-bash/) | Bash scripting, file integrity monitoring, alerting |
 | 04 | [Vulnerability Analysis – Juice Shop](./04-vulnerability-analysis/) | OWASP Top 10, web app vulnerabilities, manual testing |
 | 05 | [Incident Response Labs](./05-incident-response/) | SOC analysis, log review, detection rules, IR reports |
+| 06 | [Azure Network Simulation](./06-azure-network/) | Cloud architecture, Infrastructure as Code (IaC), Cloud security controls, Identity and Access (IAM), Monitoring & Security Information and Event Management (SIEM) |
 
 ## Skills Demonstrated
 
