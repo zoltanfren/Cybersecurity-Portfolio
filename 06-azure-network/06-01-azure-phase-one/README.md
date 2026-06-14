@@ -22,7 +22,10 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 | `snet-dmz` | 10.0.70.0/28 | Public-facing / jump box | ⭐ VM deployed |
 | `snet-internal` | 10.0.80.0/28 | Internal servers | Simulated |
 
+<details>
+<summary>Show screenshot</summary>
 ![subnets](images/03-subnets.png)
+</details>
 
 ## Virtual Machines
 

@@ -1,6 +1,6 @@
 // =============================================================
 // Azure Cloud Security Lab — Infrastructure as Code
-// Author: Zoltan Kamkar
+// Author: Zoltan Frenyo
 // Description: Single-VNet segmented lab based on Cisco Packet
 //              Tracer topology, built for portfolio and AZ-500 prep
 // =============================================================
