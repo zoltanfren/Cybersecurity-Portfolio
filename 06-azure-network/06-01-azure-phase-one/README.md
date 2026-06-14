@@ -23,7 +23,7 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 | `snet-internal` | 10.0.80.0/28 | Internal servers | Simulated |
 
 <details>
-<summary>Show screenshot</summary>
+<summary>Show screenshot of Azure subnets</summary>
 
 ![subnets](images/03-subnets.png)
 
@@ -35,7 +35,12 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 - vm-it-01 — Ubuntu 24.04 LTS, snet-it, no public IP, reachable only via jump box
 - Both VMs: Standard HDD, auto-shutdown at 19:00 UTC, password authentication disabled
 
+<details>
+<summary>Show screenshot of Azure virtual machines/summary>
+
 ![virtual_machines](images/01-virtual-machines.png)
+
+</details>
 
 ## Network security
 
@@ -52,9 +57,18 @@ az network nsg rule update \
 - 8 Network Security Groups (NSGs), one per subnet, enforcing least-privilege inter-subnet communication
 - NSGs verified with Network Watcher
 
+<details>
+<summary>Show network diagram>
+
 ![network_diagram](images/04-azure_lab_network_diagram.png)
 
+</details>
+<details>
+<summary>Show screenshot of Azure NSGs/summary>
+
 ![nsgs](images/02-nsgs.png)
+
+</details>
 
 ## Security Controls
 
