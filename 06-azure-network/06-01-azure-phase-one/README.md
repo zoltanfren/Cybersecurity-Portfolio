@@ -36,7 +36,7 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 - Both VMs: Standard HDD, auto-shutdown at 19:00 UTC, password authentication disabled
 
 <details>
-<summary>Show screenshot of Azure virtual machines/summary>
+<summary>Show screenshot of Azure virtual machines</summary>
 
 ![virtual_machines](images/01-virtual-machines.png)
 
@@ -58,13 +58,13 @@ az network nsg rule update \
 - NSGs verified with Network Watcher
 
 <details>
-<summary>Show network diagram>
+<summary>Show network diagram</summary>
 
 ![network_diagram](images/04-azure_lab_network_diagram.png)
 
 </details>
 <details>
-<summary>Show screenshot of Azure NSGs/summary>
+<summary>Show screenshot of Azure NSGs</summary>
 
 ![nsgs](images/02-nsgs.png)
 
