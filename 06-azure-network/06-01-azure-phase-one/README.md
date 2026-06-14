@@ -24,7 +24,9 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 
 <details>
 <summary>Show screenshot</summary>
+
 ![subnets](images/03-subnets.png)
+
 </details>
 
 ## Virtual Machines
