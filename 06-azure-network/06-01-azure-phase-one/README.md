@@ -31,6 +31,7 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 
 ## Virtual Machines
 
+Initially only two VMs will be simulated for cost-efficiency reasons:
 - **vm-jumpbox-01** — Ubuntu 24.04 LTS, snet-dmz, public IP, SSH key authentication only
 - **vm-it-01** — Ubuntu 24.04 LTS, snet-it, no public IP, reachable only via jump box
 - Both VMs: Standard HDD, auto-shutdown at 19:00 UTC, password authentication disabled
@@ -47,9 +48,6 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 - All VMs use SSH key pairs
 - All SSH access enters through vm-jumpbox-01 in the DMZ, with inbound rules restricted to operator IP
 - Dynamic IP update script for operators working from changing locations
-<details>
-<summary>Show IP update command</summary>
-
 ```bash
 az network nsg rule update \
   --resource-group rg-lab-portfolio \
@@ -57,8 +55,6 @@ az network nsg rule update \
   --name allow-ssh-from-current-ip \
   --source-address-prefixes $(curl -s https://api.ipify.org)
 ```
-
-</details>
 - 8 Network Security Groups (NSGs), one per subnet, enforcing least-privilege inter-subnet communication
 - NSGs verified with Network Watcher
 
@@ -81,12 +77,28 @@ az network nsg rule update \
 - Vulnerability assessment via Microsoft Defender Vulnerability Management (agentless)
 - Endpoint protection via Defender for Endpoint integration
 
+</details>
+<details>
+<summary>Show screenshot of Microsoft Defender for Cloud</summary>
+
+![nsgs](images/05-microsoft-defender-for-cloud.png)
+
+</details>
+
 ## Monitoring & logging
 
 - Log Analytics workspace (law-lab-portfolio, PerGB2018 tier)
 - Azure Monitor Agent deployed via Data Collection Rule
 - Syslog forwarding from both VMs to Log Analytics
 - Verified log ingestion via KQL queries
+
+</details>
+<details>
+<summary>Show screenshot of Log Analytics workspace/summary>
+
+![nsgs](images/06-log-analytics-workspace.png)
+
+</details>
 
 ## Infrastructure as Code
 
