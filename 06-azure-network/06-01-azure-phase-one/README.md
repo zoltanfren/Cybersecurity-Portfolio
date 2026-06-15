@@ -94,7 +94,7 @@ az network nsg rule update \
 
 </details>
 <details>
-<summary>Show screenshot of Log Analytics workspace/summary>
+<summary>Show screenshot of Log Analytics workspace</summary>
 
 ![nsgs](images/06-log-analytics-workspace.png)
 
