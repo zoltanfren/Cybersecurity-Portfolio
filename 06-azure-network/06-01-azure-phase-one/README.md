@@ -1,13 +1,13 @@
 # Azure network implementation project - Phase 1
 
-In phase one I have implemented the following;
-- Core architecture of the network, main VNet and subnets
-- Two VMs simulating an internal server and the jumpbox in the DMZ
-- Basic security with Network Security Groups and Microsoft Defender for Cloud
-- Monitoring & logging via Log Analytics workspace
-- Full infrastructure exported as Bicep template
+In phase one the following has been implemented;
+1.1 Core architecture of the network, main VNet and subnets
+1.2 Two VMs simulating an internal server and the jumpbox in the DMZ
+1.3 Basic security with Network Security Groups and Microsoft Defender for Cloud
+1.4 Monitoring & logging via Log Analytics workspace
+1.5 Full infrastructure exported as Bicep template
 
-## Architecture
+## 1.1 : Core Architecture
 
 Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN structure:
 
@@ -18,8 +18,8 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 | `snet-support1` | 10.0.30.0/27 | Support team 1 | Simulated |
 | `snet-support2` | 10.0.40.0/27 | Support team 2 | Simulated |
 | `snet-study` | 10.0.50.0/27 | Study/training | Simulated |
-| `snet-it` | 10.0.60.0/27 | IT administrators | ⭐ VM deployed |
-| `snet-dmz` | 10.0.70.0/28 | Public-facing / jump box | ⭐ VM deployed |
+| `snet-it` | 10.0.60.0/27 | IT administrators | 🖥️ VM deployed |
+| `snet-dmz` | 10.0.70.0/28 | Public-facing / jump box | 🖥️ VM deployed |
 | `snet-internal` | 10.0.80.0/28 | Internal servers | Simulated |
 
 <details>
@@ -29,7 +29,7 @@ Single VNet (`10.0.0.0/16`) with 8 subnets mirroring a real corporate VLAN struc
 
 </details>
 
-## Virtual Machines
+## 1.2 : Virtual Machines
 
 Initially only two VMs will be simulated for cost-efficiency reasons:
 - **vm-jumpbox-01** — Ubuntu 24.04 LTS, snet-dmz, public IP, SSH key authentication only
@@ -43,7 +43,7 @@ Initially only two VMs will be simulated for cost-efficiency reasons:
 
 </details>
 
-## Network security
+## 1.3 : Network security
 
 - All VMs use SSH key pairs
 - All SSH access enters through vm-jumpbox-01 in the DMZ, with inbound rules restricted to operator IP
@@ -71,7 +71,7 @@ az network nsg rule update \
 
 </details>
 
-## Security Controls
+### 1.3.1 : Security Controls
 
 - Microsoft Defender for Cloud - Plan 1 (threat detection, vulnerability assessment)
 - Vulnerability assessment via Microsoft Defender Vulnerability Management (agentless)
@@ -85,7 +85,7 @@ az network nsg rule update \
 
 </details>
 
-## Monitoring & logging
+## 1.4 : Monitoring & logging
 
 - Log Analytics workspace (law-lab-portfolio, PerGB2018 tier)
 - Azure Monitor Agent deployed via Data Collection Rule
@@ -100,10 +100,18 @@ az network nsg rule update \
 
 </details>
 
-## Infrastructure as Code
+## 1.5 : Infrastructure as Code
 
 - Infrastructure exported as ARM template via `az group export`
 - ARM template decompiled to Bicep -> circular dependency errors from 
   duplicate NSG rule definitions required a clean hand-written rewrite
 - Final [main.bicep](./main.bicep) is parameterized and free of auto-generated noise
 
+## 1.6 : Phase 2 - improvements
+
+Phase two adds the following to the project;
+2.1 Hub-and spoke-architecture using multiple, peered VNets instead of a single one
+2.2 A Network Virtual Appliance (NVA) for spoke-to-spoke traffic inspection
+2.3 Private DNS
+2.4 Azure Key Vault for secret management
+2.5 Cloud services using a containerised application that retrieves secrets from the Key Vault at runtime

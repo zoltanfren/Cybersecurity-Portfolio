@@ -1,0 +1,44 @@
+apiVersion: '2021-10-01'
+location: westeurope
+name: aci-lab-app
+identity:
+  type: UserAssigned
+  userAssignedIdentities:
+    /subscriptions/9f74ed1b-ba68-4724-b229-1599aa32fadb/resourcegroups/rg-lab-portfolio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mi-lab-app: {}
+properties:
+  osType: Linux
+  restartPolicy: OnFailure
+  ipAddress:
+    type: Public
+    ports:
+      - protocol: TCP
+        port: 80
+  containers:
+    - name: aci-lab-app
+      properties:
+        image: mcr.microsoft.com/azure-cli
+        ports:
+          - port: 80
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 1
+            memoryInGb: 1.5
+        environmentVariables:
+          - name: MI_CLIENT_ID
+            value: ecd3cdae-1199-4545-97a2-397cc1df2b28
+          - name: VAULT_NAME
+            value: kv-lab-portfolio
+          - name: SECRET_NAME
+            value: db-connection-string
+        command:
+          - /bin/sh
+          - -c
+          - |
+            mkdir -p /web
+            az login --identity --client-id $MI_CLIENT_ID
+            SECRET=$(az keyvault secret show --vault-name $VAULT_NAME --name $SECRET_NAME --query value -o tsv)
+            LEN=$(printf %s "$SECRET" | wc -c)
+            echo "<html><body><h1>Lab App</h1><p>Key Vault secret retrieved via managed identity. Length: $LEN chars.</p></body></html>" > /web/index.html
+            cd /web
+            python3 -m http.server 80
