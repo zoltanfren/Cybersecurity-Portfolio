@@ -1,9 +1,5 @@
 # IP Addressing Table
 
-> 🔴 Red = Default gateway of the VLAN  
-> 🔵 Blue = Default gateway of the central switch (internet access)  
-> Subnet mask `/27` = `255.255.255.224` | `/28` = `255.255.255.240`
-
 ---
 
 ## VLAN 10 — Management
