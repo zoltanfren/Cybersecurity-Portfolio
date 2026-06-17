@@ -1,11 +1,11 @@
 # Azure network implementation project - Phase 1
 
 In phase one the following has been implemented;
-1.1 Core architecture of the network, main VNet and subnets
-1.2 Two VMs simulating an internal server and the jumpbox in the DMZ
-1.3 Basic security with Network Security Groups and Microsoft Defender for Cloud
-1.4 Monitoring & logging via Log Analytics workspace
-1.5 Full infrastructure exported as Bicep template
+- 1.1 Core architecture of the network, main VNet and subnets
+- 1.2 Two VMs simulating an internal server and the jumpbox in the DMZ
+- 1.3 Basic security with Network Security Groups and Microsoft Defender for Cloud
+- 1.4 Monitoring & logging via Log Analytics workspace
+- 1.5 Full infrastructure exported as Bicep template
 
 ## 1.1 : Core Architecture
 
@@ -107,7 +107,7 @@ az network nsg rule update \
   duplicate NSG rule definitions required a clean hand-written rewrite
 - Final [main.bicep](./main.bicep) is parameterized and free of auto-generated noise
 
-## 1.6 : Phase 2 - improvements
+## 1.6 : Phase 2 improvements
 
 Phase two adds the following to the project;
 2.1 Hub-and spoke-architecture using multiple, peered VNets instead of a single one
