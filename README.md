@@ -1,6 +1,6 @@
 # BeCode Cybersecurity Portfolio
 
-This repository contains the projects I completed during my cybersecurity training at BeCode (Cybersecurity Analyst). The projects cover a range of topics, from network fundamentals to incident response, and are ordered roughly by progression. The last project was built to demonstrate practical skills developed while preparing for the AZ-104 and AZ-500 certifications.
+This repository contains the projects I completed during my cybersecurity training at BeCode (Cybersecurity Analyst). The projects cover a range of topics, from network fundamentals to incident response, and are ordered roughly by progression. The last project was built to demonstrate practical skills developed while preparing for the AZ-104 certification.
 
 ## Projects
 
@@ -23,6 +23,6 @@ This repository contains the projects I completed during my cybersecurity traini
 
 ## About
 
-I completed this training as part of the BeCode Cybersec Belgium program. My background combines IT support, presales, and a strong interest in cloud security — I hold the Microsoft Azure Fundamentals (AZ-900) certification and am currently working toward AZ-500 and SC-200.
+I completed this training as part of the BeCode Cybersec Belgium program. My background combines IT support, presales, and a strong interest in cloud security — I hold the Microsoft Azure Fundamentals (AZ-900) certification and am currently working toward AZ-104 and SC-500.
 
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/zoltan-f/) if you have any questions about the work here.
