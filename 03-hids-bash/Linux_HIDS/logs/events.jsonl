@@ -1,0 +1,579 @@
+{"timestamp":"2026-04-16T11:07:09Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:07:09Z","level":"WARNING","module":"process_network","message":"PID=243246 USER=kali PPID=243097 SCORE=4 ESTAB=0 LISTEN=0 REASONS=suspicious_path EXE=/tmp/fake_sleep CMD=\"/tmp/fake_sleep 300\"","pid":"243246","user":"kali","ppid":"243097","score":"4","estab":"0","listen":"0","reasons":"suspicious_path","exe":"/tmp/fake_sleep","cmd":"/tmp/fake_sleep 300"}
+{"timestamp":"2026-04-16T11:08:00Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:08:01Z","level":"WARNING","module":"process_network","message":"PID=243246 USER=kali PPID=243097 SCORE=4 ESTAB=0 LISTEN=0 REASONS=suspicious_path EXE=/tmp/fake_sleep CMD=\"/tmp/fake_sleep 300\"","pid":"243246","user":"kali","ppid":"243097","score":"4","estab":"0","listen":"0","reasons":"suspicious_path","exe":"/tmp/fake_sleep","cmd":"/tmp/fake_sleep 300"}
+{"timestamp":"2026-04-16T11:11:29Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:16:43Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:22:23Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:27:29Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:32:54Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:38:10Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:43:25Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:48:29Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:53:56Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T11:59:11Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:04:27Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:09:29Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:14:58Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:20:13Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:25:28Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:30:29Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"INFO","module":"user_activity","message":"User Count: 1 regular user(s) — normal"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"INFO","module":"user_activity","message":"Sudo Trail: 2 sudo event(s) in last hour — normal"}
+{"timestamp":"2026-04-16T12:31:08Z","level":"INFO","module":"user_activity","message":"Source IPs: All SSH activity within allowed IP range"}
+{"timestamp":"2026-04-16T12:31:10Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"INFO","module":"user_activity","message":"User Count: 1 regular user(s) — normal"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"INFO","module":"user_activity","message":"Sudo Trail: 3 sudo event(s) in last hour — normal"}
+{"timestamp":"2026-04-16T12:35:57Z","level":"INFO","module":"user_activity","message":"Source IPs: All SSH activity within allowed IP range"}
+{"timestamp":"2026-04-16T12:35:59Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"INFO","module":"user_activity","message":"User Count: 1 regular user(s) — normal"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"INFO","module":"user_activity","message":"Sudo Trail: 3 sudo event(s) in last hour — normal"}
+{"timestamp":"2026-04-16T12:41:13Z","level":"INFO","module":"user_activity","message":"Source IPs: All SSH activity within allowed IP range"}
+{"timestamp":"2026-04-16T12:41:15Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:25Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:26Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:46:27Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:47:32Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:51:43Z","level":"WARNING","module":"user_activity","message":"Privilege Escalation: 12 sudo events in the last hour — possible escalation attempt"}
+{"timestamp":"2026-04-16T12:51:46Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T12:56:59Z","level":"WARNING","module":"user_activity","message":"Privilege Escalation: 12 sudo events in the last hour — possible escalation attempt"}
+{"timestamp":"2026-04-16T12:57:01Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T13:00:22Z","level":"INFO","module":"system_health","message":"METRIC=CPU VALUE=53 UNIT=% THRESHOLD=info LIMIT=50","metric":"CPU","value":"53","unit":"%","threshold":"info","limit":"50"}
+{"timestamp":"2026-04-16T13:00:23Z","level":"WARNING","module":"system_health","message":"METRIC=Load1m VALUE=3 UNIT= THRESHOLD=warning LIMIT=2","metric":"Load1m","value":"3","threshold":"warning","limit":"2"}
+{"timestamp":"2026-04-16T13:02:22Z","level":"INFO","module":"system_health","message":"METRIC=CPU VALUE=60 UNIT=% THRESHOLD=info LIMIT=50","metric":"CPU","value":"60","unit":"%","threshold":"info","limit":"50"}
+{"timestamp":"2026-04-16T13:02:22Z","level":"WARNING","module":"system_health","message":"METRIC=Load1m VALUE=2 UNIT= THRESHOLD=warning LIMIT=2","metric":"Load1m","value":"2","threshold":"warning","limit":"2"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:02:23Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 24 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:02:25Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T13:06:25Z","level":"CRITICAL","module":"system_health","message":"METRIC=CPU VALUE=100 UNIT=% THRESHOLD=critical LIMIT=90","metric":"CPU","value":"100","unit":"%","threshold":"critical","limit":"90"}
+{"timestamp":"2026-04-16T13:06:31Z","level":"WARNING","module":"system_health","message":"METRIC=Load1m VALUE=2 UNIT= THRESHOLD=warning LIMIT=2","metric":"Load1m","value":"2","threshold":"warning","limit":"2"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"system_health","message":"METRIC=Load1m VALUE=3 UNIT= THRESHOLD=warning LIMIT=2","metric":"Load1m","value":"3","threshold":"warning","limit":"2"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:24Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:07:25Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:07:27Z","level":"CRITICAL","module":"process_network","message":"PID=240454 USER=kali PPID=240251 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"240454","user":"kali","ppid":"240251","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:04:15Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:09:16Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:14:30Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:19:47Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:25:03Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:11Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 27 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:30:59Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 29 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:33:46Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 41 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:35:30Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 42 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:40:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/sudoers"}
+{"timestamp":"2026-04-16T13:40:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-16T13:40:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-16T13:40:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-16T13:40:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-16T13:40:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:40:31Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 45 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:40:37Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-16T13:40:37Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-16T13:40:37Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-16T13:40:37Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-16T13:40:37Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:46:03Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 48 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:46:12Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-16T13:46:12Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-16T13:46:12Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-16T13:46:12Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-16T13:46:12Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-16T13:51:21Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 39 sudo events in the last hour!"}
+{"timestamp":"2026-04-16T13:51:27Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-16T13:51:27Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-16T13:51:27Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-16T13:51:27Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-16T13:51:27Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T07:15:15Z","level":"INFO","module":"system_health","message":"METRIC=Load1m VALUE=1 UNIT= THRESHOLD=info LIMIT=1","metric":"Load1m","value":"1","threshold":"info","limit":"1"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:15:16Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:16:03Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-17T07:16:03Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T07:16:03Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T07:16:03Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T07:16:03Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:34:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T07:35:20Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-17T07:35:20Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T07:35:20Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T07:35:20Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T07:35:20Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T08:15:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T08:15:54Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-17T08:15:54Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T08:15:54Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T08:15:54Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T08:15:54Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:15:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T09:16:09Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-17T09:16:09Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T09:16:09Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T09:16:09Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T09:16:09Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:10Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:11Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T10:16:52Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-17T10:16:52Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T10:16:52Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T10:16:52Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T10:16:52Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T11:16:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T11:17:11Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/audit/audit.rules"}
+{"timestamp":"2026-04-17T11:17:11Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T11:17:11Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T11:17:11Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T11:17:11Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/ld.so.cache"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:16:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T12:17:10Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T12:17:10Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T12:17:10Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:04Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T13:17:44Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T13:17:44Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.service"}
+{"timestamp":"2026-04-17T13:17:44Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/systemd/system/hids.timer"}
+{"timestamp":"2026-04-17T14:17:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:17:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T14:18:08Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:00Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T15:18:44Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T16:18:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T16:18:53Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:18:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T17:19:27Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:19:21Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T18:20:00Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:19:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T19:20:09Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:19:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T20:20:12Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:03Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T21:20:30Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-17T22:20:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:28Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:29Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-17T22:20:57Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:27:34Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T16:28:13Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"INFO","module":"system_health","message":"METRIC=Load1m VALUE=1 UNIT= THRESHOLD=info LIMIT=1","metric":"Load1m","value":"1","threshold":"info","limit":"1"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-19T17:02:30Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:45:26Z","level":"INFO","module":"system_health","message":"METRIC=Load1m VALUE=1 UNIT= THRESHOLD=info LIMIT=1","metric":"Load1m","value":"1","threshold":"info","limit":"1"}
+{"timestamp":"2026-04-20T05:46:10Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
+{"timestamp":"2026-04-20T05:46:56Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 01:44:20 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:56Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:56Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:46:57Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:58:19Z","level":"CRITICAL","module":"process_network","message":"PID=15975 USER=kali PPID=15835 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"15975","user":"kali","ppid":"15835","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"system_health","message":"METRIC=IOPressure VALUE=32 UNIT=% THRESHOLD=warning LIMIT=20","metric":"IOPressure","value":"32","unit":"%","threshold":"warning","limit":"20"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 01:44:20 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:14:29 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:04:53 2026 - Thu (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Wed at 2026 - Wed Apr (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:56:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:29:50 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 02:54:37 2026 - still (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 06:14:49 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:08:02 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 04:51:16 2026 - Wed (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"root\" login from Mon at 2026 - Mon Mar (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"WARNING","module":"user_activity","message":"Impossible Timestamp: User \"kali\" login from :0 at 03:23:12 2026 - Mon (outside 7:00-20:00)"}
+{"timestamp":"2026-04-20T05:59:41Z","level":"CRITICAL","module":"user_activity","message":"Privilege Escalation: High sudo activity: 17 sudo events in the last hour!"}
+{"timestamp":"2026-04-20T05:59:43Z","level":"CRITICAL","module":"process_network","message":"PID=15975 USER=kali PPID=15835 SCORE=6 ESTAB=0 LISTEN=0 REASONS=suspicious_path,suspicious_cmdline EXE=/tmp/fake_nc CMD=\"/tmp/fake_nc -l -p 4444\"","pid":"15975","user":"kali","ppid":"15835","score":"6","estab":"0","listen":"0","reasons":"suspicious_path,suspicious_cmdline","exe":"/tmp/fake_nc","cmd":"/tmp/fake_nc -l -p 4444"}
+{"timestamp":"2026-04-20T06:00:04Z","level":"WARNING","module":"file_integrity","message":"File modified in /etc within last 24h: /etc/resolv.conf"}
