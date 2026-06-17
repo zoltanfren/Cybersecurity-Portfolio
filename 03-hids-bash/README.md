@@ -1,7 +1,7 @@
 # Project 3 — Linux HIDS (Host Intrusion Detection System)
 
 > **Modular host-based intrusion detection system written in Bash**  
-> Solo project | Linux (systemd) | Bash 5+
+> Team challenge | Duration: 7 days | Linux (systemd) | Bash 5+
 
 ---
 
