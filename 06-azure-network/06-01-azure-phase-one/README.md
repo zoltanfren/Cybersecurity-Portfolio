@@ -110,8 +110,8 @@ az network nsg rule update \
 ## 1.6 : Phase 2 improvements
 
 Phase two adds the following to the project;
-2.1 Hub-and spoke-architecture using multiple, peered VNets instead of a single one
-2.2 A Network Virtual Appliance (NVA) for spoke-to-spoke traffic inspection
-2.3 Private DNS
-2.4 Azure Key Vault for secret management
-2.5 Cloud services using a containerised application that retrieves secrets from the Key Vault at runtime
+- Hub-and spoke-architecture using multiple, peered VNets instead of a single one  
+- A Network Virtual Appliance (NVA) for spoke-to-spoke traffic inspection  
+- Private DNS  
+- Azure Key Vault for secret management  
+- Cloud services using a containerised application that retrieves secrets from the Key Vault at runtime  
