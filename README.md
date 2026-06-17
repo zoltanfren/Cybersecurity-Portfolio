@@ -19,10 +19,13 @@ This repository contains the projects I completed during my cybersecurity traini
 - Scripting for security tooling (Python, Bash)
 - Web application vulnerability assessment (OWASP Juice Shop)
 - Threat detection and incident investigation (Suricata, log analysis)
+- Cloud infrastructure deployment and security (Azure, IaC, IAM, monitoring)
 - Technical report writing for both technical and executive audiences
 
 ## About
 
-I completed this training as part of the BeCode Cybersec Belgium program. My background combines IT support, presales, and a strong interest in cloud security — I hold the Microsoft Azure Fundamentals (AZ-900) certification and am currently working toward AZ-104 and SC-500.
+I completed this training as part of the BeCode Cybersec Belgium program. 
+My background combines IT support, presales, and a strong interest in cloud security. 
+I hold the Comptia Security+ and Microsoft Azure Fundamentals (AZ-900) certifications and am currently working toward Azure Administrator Associate (AZ-104) and  Cloud and AI Security Engineer Associate (SC-500).
 
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/zoltan-f/) if you have any questions about the work here.
