@@ -24,7 +24,7 @@ This repository contains the projects I completed during my cybersecurity traini
 
 ## About
 
-I completed this training as part of the BeCode Cybersec Belgium program.  
+I completed these projects as part of the BeCode Cybersecurity Analyst training program.  
 My background combines IT support, presales, and a strong interest in cloud security.  
 I hold the Comptia Security+ and Microsoft Azure Fundamentals (AZ-900) certifications and am currently working toward Azure Administrator Associate (AZ-104) and  Cloud and AI Security Engineer Associate (SC-500).  
 
