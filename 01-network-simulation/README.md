@@ -1,7 +1,7 @@
 # Project 1 — Secure Network Design & Simulation
 
 > **BeCode Corp. — Network Infrastructure Project**  
-> Team challenge | Duration: 7 days | Deadline: 01/03/2026
+> Team challenge | Duration: 7 days
 
 ---
 
