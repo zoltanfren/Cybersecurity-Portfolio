@@ -26,6 +26,6 @@ This repository contains the projects I completed during my cybersecurity traini
 
 I completed these projects as part of the BeCode Cybersecurity Analyst training program.  
 My background combines IT support, presales, and a strong interest in cloud security.  
-I hold the Comptia Security+ and Microsoft Azure Fundamentals (AZ-900) certifications and am currently working toward Azure Administrator Associate (AZ-104) and  Cloud and AI Security Engineer Associate (SC-500).  
+I hold the Comptia Security+ and Azure Administrator Associate (AZ-104) certifications and am currently working toward Azure Cloud and AI Security Engineer Associate (SC-500).  
 
 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/zoltan-f/) if you have any questions about the work here.
