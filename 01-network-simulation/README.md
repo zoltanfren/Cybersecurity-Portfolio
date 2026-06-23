@@ -73,10 +73,10 @@ ensuring no single point of failure at the aggregation layer.
 ### Services
 | Service | Device | Location |
 |---------|--------|----------|
-| DHCP | IS-DHCP-1 + IT-DHCP-1 | VLAN 80 / VLAN 60 |
+| DHCP | IS-DHCP-1 | VLAN 80 |
 | DNS | DMZ-DNS-1 | VLAN 70 (DMZ) |
 | FTP | IS-FTP-1 | VLAN 80 |
-| AAA | IS-AAA-1 + IT-AAA-1 | VLAN 80 / VLAN 60 |
+| AAA | IS-AAA-1 | VLAN 80 |
 
 ### DMZ
 The DMZ (VLAN 70) is physically separated from the internal network through a dedicated border router (DMZ-RT-1). 
