@@ -10,5 +10,5 @@ The project is structured in phases, each building on the previous to implement 
 |---|---------|--------|
 | 01 | [Phase 1](./06-01-azure-phase-one/) | Virtual Machines, Subnetting, Network Security Groups, Microsoft Defender for Cloud, Monitoring & Logging, Infrastructure as Code |
 | 02 | [Phase 2](./06-02-azure-phase-two/) | Hub and Spoke architecture, Network Virtual Appliance, DNS, Azure Key Vault, Containers|
-
+| 03 | [Phase 3](./06-03-azure-phase-three/) | Terraform, Storage Account, Azure Policy, Azure Backup, Microsoft Sentinel |
 
