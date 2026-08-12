@@ -1,6 +1,6 @@
 # BeCode Cybersecurity Portfolio
 
-This repository contains the projects I completed during my cybersecurity training at BeCode (Cybersecurity Analyst). The projects cover a range of topics, from network fundamentals to incident response, and are ordered roughly by progression. The last project was built to demonstrate practical skills developed while preparing for the AZ-104 certification.
+This repository contains the projects I completed during my cybersecurity training at BeCode (Cybersecurity Analyst). The projects cover a range of topics, from network fundamentals to incident response, and are ordered roughly by progression. The last project was built to demonstrate practical skills developed while preparing for the Azure Administrator Associat (AZ-104) certification.
 
 ## Projects
 
