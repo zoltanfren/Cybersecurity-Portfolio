@@ -21,7 +21,7 @@ The network covers 6 operational departments plus a DMZ and an internal server z
 │   ├── Network_topology.pkt           # Cisco Packet Tracer simulation file
 │   ├── Network_topology.png           # Network topology screenshot
 │   ├── IP_table.xlsx                  # IP addressing table overview
-│   └── Device_interfaces.xlsx         # Defice interface configurations
+│   └── Device_interfaces.xlsx         # Device interface configurations
 └── Configuration_files/			   # IOS configuration files of the networking equipment
     ├── Border Router - DMZ-RT-1.ios
     ├── Central Switch - VS-1-1.ios
