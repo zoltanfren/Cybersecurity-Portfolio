@@ -1,0 +1,13 @@
+# Downloaded provider binaries — large, reproducible via terraform init
+.terraform/
+
+# State files — contain sensitive resource IDs, managed remotely
+*.tfstate
+*.tfstate.backup
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Crash logs
+crash.log
