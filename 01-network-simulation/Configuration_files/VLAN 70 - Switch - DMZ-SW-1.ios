@@ -49,7 +49,7 @@ interface range g2/1,fa3/1-fa9/1
 !
 ! Create a local user
 username admin secret admin
-! Secure priviledged EXEC mode
+! Secure privileged EXEC mode
 enable secret admin
 ! Encrypt local passwords
 service password-encryption

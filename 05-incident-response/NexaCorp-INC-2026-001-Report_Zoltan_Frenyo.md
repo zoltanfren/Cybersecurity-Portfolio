@@ -1,6 +1,6 @@
 # NexaCorp — INC2026001 | Incident Report
 
-**Author:** Zoltàn Frenyo  
+**Author:** Zoltan Frenyo  
 **Date of report:** 15 May 2026  
 **Attack target:** 192.168.10.10  
 **Attacker IP:** 172.16.50.10  

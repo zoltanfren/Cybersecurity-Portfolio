@@ -77,4 +77,4 @@ systemctl enable hids.timer
 systemctl restart hids.timer
 
 echo "[✓] HIDS installed and running"
-echo "Runs automatically every 5 minutes"
+echo "Runs automatically every 60 minutes"

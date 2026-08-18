@@ -1,6 +1,6 @@
 # Azure network implementation project - Phase 1
 
-In phase one the following has been implemented;
+In phase one the following has been implemented:
 - 1.1 Core architecture of the network, main VNet and subnets
 - 1.2 Two VMs simulating an internal server and the jumpbox in the DMZ
 - 1.3 Basic security with Network Security Groups and Microsoft Defender for Cloud
@@ -109,7 +109,7 @@ az network nsg rule update \
 
 ## 1.6 : Phase 2 improvements
 
-Phase two adds the following to the project;
+Phase two adds the following to the project:
 - Hub-and spoke-architecture using multiple, peered VNets instead of a single one  
 - A Network Virtual Appliance (NVA) for spoke-to-spoke traffic inspection  
 - Private DNS  

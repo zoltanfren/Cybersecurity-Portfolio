@@ -50,7 +50,7 @@ interface range fa0/3-24,g0/1-2
 ! Basic security settings
 ! Create a local user as fallback in case the AAA server is down
 username backupadmin secret admin
-! Secure priviledged EXEC mode
+! Secure privileged EXEC mode
 enable secret admin
 ! Encrypt local passwords
 service password-encryption

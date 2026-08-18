@@ -2,7 +2,7 @@
 
 ## Overview
 
-Phase two adds the following to the project;
+Phase two adds the following to the project:
 - 2.1 Hub-and spoke-architecture using multiple, peered VNets instead of a single one
 - 2.2 A Network Virtual Appliance (NVA) for spoke-to-spoke traffic inspection
 - 2.3 Private DNS
@@ -77,7 +77,7 @@ Rules are persisted across reboots via a custom systemd service (`iptables-resto
 | Corporate → IT | TCP | 80, 443 | Workstations accessing IT services |
 | Both | ICMP | * | Monitoring and troubleshooting |
 
-### 2.2.1 :  User Defined Routes
+### 2.2.1 : User Defined Routes
 
 Two route tables redirect spoke-to-spoke traffic through the NVA:
 

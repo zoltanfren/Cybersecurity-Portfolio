@@ -11,7 +11,7 @@ INC-2026-002 | bru-app-01 | Root-Level Compromise
 | Target host | bru-app-01 (NexaCorp Brussels internal API server) — 10.10.10.42 |
 | Attack timestamp | 2026-05-16 17:43 – 19:50 UTC+2 (local) |
 | Reported by | NexaCorp CISO / Wazuh SIEM alert |
-| Investigated by | Zoltàn Frenyo - SOC Analyst at BeCorp |
+| Investigated by | Zoltan Frenyo - SOC Analyst at BeCode Corp |
 | Report date | 2026-05-21 |
 | Status | ACTIVE — attacker persistence remains on host |
 
